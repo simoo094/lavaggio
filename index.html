@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autolavaggi Verbania</title>
+<meta name="description" content="Prezzi e istruzioni dell'autolavaggio in 5 lingue">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0B0D;--card:#16191E;--line:#2A2F37;--tx:#E6E9ED;--mut:#9AA1AC;--red:#E3262B;--redt:#FF6B6B;--yel:#FFE500}
+:root:not([data-theme="light"]){color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0A0B0D}}
+:root[data-theme="dark"]{--bg:#0A0B0D}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:500 16px/1.45 'Barlow',system-ui,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 48px}
+header{position:sticky;top:0;z-index:5;background:rgba(10,11,13,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top{max-width:760px;margin:0 auto;padding:10px 16px;display:flex;flex-direction:column;gap:10px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand b{font:italic 900 22px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;color:#fff}
+.langs{display:flex;gap:6px;flex-wrap:wrap}
+.langs button{font:700 15px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;min-height:40px;min-width:44px;padding:0 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--tx);cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--yel);border-color:var(--yel);color:#0A0B0D}
+nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+nav a{flex:none;font:700 15px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--tx);text-decoration:none;padding:10px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);min-height:40px;display:flex;align-items:center}
+nav a.on{background:#fff;color:#0A0B0D}
+h1{font:italic 900 34px/1.05 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:28px 0 4px;color:#fff;scroll-margin-top:130px}
+.kick{font:700 14px/1 'Barlow Condensed',sans-serif;letter-spacing:2.5px;text-transform:uppercase;color:var(--mut)}
+h2{font:800 22px/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:22px 0 10px;color:#fff}
+section{padding-top:4px}
+.prog{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;margin:10px 0}
+.pb{border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font:italic 900 34px/1 'Barlow Condensed',sans-serif;padding:8px 0;gap:4px}
+.pb small{font:italic 900 20px/1 'Barlow Condensed',sans-serif}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.pn{font:italic 800 21px/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase;color:#fff;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.tag{font:italic 900 12px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;padding:4px 7px;border-radius:5px;background:var(--yel);color:#0A0B0D}
+.tag.w{background:#fff;color:#C1121F}
+ul{margin:8px 0 0;padding:0;list-style:none}
+li{display:flex;gap:9px;align-items:flex-start;padding:2px 0}
+li:before{content:"";flex:none;width:7px;height:7px;margin-top:8px;border-radius:2px;background:var(--red)}
+.hl{color:var(--redt);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.chip{font:700 14px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;padding:7px 10px;border-radius:999px;background:#262B33;color:var(--tx)}
+.chip.y{background:var(--yel);color:#0A0B0D}
+.chip.g{background:#22A84A;color:#fff}
+p{margin:6px 0}
+.warn{color:var(--redt);font-weight:700}
+.tip{color:#FFD84D;font-weight:600}
+.band{border-radius:14px;padding:14px 16px;margin:12px 0;font-weight:600}
+.band b{font:800 22px/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase;display:block;margin-bottom:4px}
+.band.r{background:var(--red);color:#fff}
+.band.y{background:var(--yel);color:#0A0B0D}
+.band.d{background:var(--card);border:1.5px solid var(--red)}
+.step{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;margin:10px 0}
+.num{width:40px;height:40px;border-radius:50%;background:#fff;color:#0A0B0D;display:flex;align-items:center;justify-content:center;font:800 24px/1 'Barlow Condensed',sans-serif}
+.dims{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.dim{flex:1 1 90px;text-align:center;background:#fff;color:#0A0B0D;border:7px solid var(--red);border-radius:999px;padding:10px 6px;font:800 22px/1 'Barlow Condensed',sans-serif}
+.dim span{display:block;font:700 12px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;color:#4A525E;margin-bottom:4px}
+.no li:before{background:none;content:"✕";color:var(--redt);font-weight:800;width:auto;height:auto;margin-top:0}
+.legal{font-size:14.5px;color:#C9CDD3;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:12px}
+.legal p{margin:6px 0}
+.price{margin-left:auto;font:italic 900 28px/1 'Barlow Condensed',sans-serif;color:#fff}
+.variant{display:flex;gap:6px;margin:10px 0}
+.variant button{flex:1;min-height:44px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--tx);font:700 15px/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase;cursor:pointer;padding:6px}
+.variant button[aria-pressed="true"]{background:#fff;color:#0A0B0D}
+footer{margin-top:36px;color:var(--mut);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="top">
+<div class="brand"><b>Autolavaggi Verbania</b><div class="langs" id="langs"></div></div>
+<nav id="nav"></nav>
+</div></header>
+<main class="wrap" id="app"></main>
+<script>
+var L=['it','en','fr','de','es'];
+var NAMES={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES'};
+var COL=['#E3262B','#F7841E','#FFE500','#22A84A','#00A3E0','#3B4CCA','#E0279A','#6B2D80','#E8B520'];
+var DARK=[0,0,1,0,1,0,0,0,1];
+// ---------- testi ----------
+var T={
+it:{nav:['Prezzi portale','Istruzioni portale','Piste self-service','Divieti piste'],
+kickP:'Portale automatico · lavaggio a spazzole',
+var1:'Portale senza pioggia di schiuma',var2:'Portale con pioggia di schiuma',
+always:'Scegli il programma alla cassa del portale',
+nobr:'Senza spazzole',nw:'Novità',
+progs:['Asciugatura + Sottoscocca','Lavaggio Lucidante','Lavaggio con Sottoscocca','Lavaggio Super','Lucidante + Sottoscocca','Intensivo Estivo','Intensivo Invernale','Polish Ultralucidante + Sottoscocca','Lavaggio Gold'],
+it:{sch:'Schiuma attiva super',pio:'Pioggia di schiuma',risc:'Risciacquo alta pressione oscillante',osc:'Alta pressione oscillante',osc2:'2X alta pressione oscillante',sup:'Alta pressione superiore',tot:'Alta pressione totale',cer:'Chimico + alta pressione cerchi',cer2:'2X chimico + alta pressione cerchi',sot:'Lavaggio sottoscocca alta pressione',neb:'Nebulizzazione chimica (anti-moscerini)',neb2:'2X nebulizzazione chimica (anti-moscerini)',spz:'2X spazzole + shampoo',luc:'2X spazzole + shampoo lucidante',pol:'Distribuzione polish + 2X spazzolamento',cera:'Super cera',asc:'2X asciugatura',slow:'2X asciugatura slow'},
+hP:'Istruzioni e avvertenze',safe:['Severamente vietato restare in auto durante il lavaggio','e passare nell\'area di lavaggio mentre il portale è in funzione.'],
+steps:[['Entra dritto, fari verso il portale','Entra in marcia avanti (non in retromarcia), con tutte e 4 le ruote dentro le guide ruote gialle.'],['Avanza piano fino allo STOP','Se si accende la freccia bianca sei andato troppo avanti: indietreggia fino allo STOP.'],['Prepara l\'auto e scendi','Motore spento, freno a mano, specchietti chiusi, antenna tolta. Poi scendi e scegli il programma (P1–P9) alla cassa.'],['Freccia verde: puoi uscire','A lavaggio finito si accende la freccia verde: risali e riprendi il veicolo.']],
+hNo:'Veicoli non adatti al portale',dimL:['Altezza oltre','Lunghezza oltre','Larghezza oltre'],
+no:['Pick-up e fuoristrada con sporgenze accentuate (paraurti, parafanghi, bull-bar, fari rotanti…)','Portabici, portasci, portapacchi fissi, spoiler, lame, baffetti, lampeggianti, deflettori, minigonne e accessori che aumentano le dimensioni','Parti non perfettamente integre: bollature, specchietti, paraurti, copricerchi, parafanghi, tergicristalli logori o rovinati','Profili metallici, stemmi sporgenti e ornamenti applicati in modo imperfetto','Auto storiche, d\'epoca e supercar','Specchietti sportivi con sporgenze accentuate'],
+hSc:'Sconsigliato',sc:['Serie BMW, per la fragilità','Vetture con 5 anni o più','Vernici opache o anodizzate','Cerchioni opachi o colorati','Veicoli con adesivi','Coprimozzi e copridadi'],
+reW:'Attenzione',re:'In caso di danni presunti o verificati è severamente vietato rilavare il veicolo.',
+legP:['Vietato utilizzare prodotti chimici personali sul veicolo prima o durante il lavaggio.','Non potendone verificare l\'integrità, l\'autolavaggio declina ogni responsabilità per danni a targhe, tergicristalli e/o specchietti.','I prodotti sono solo per uso esterno: si declina ogni responsabilità in caso di infiltrazioni.','La direzione declina ogni responsabilità per l\'inosservanza delle indicazioni e per danni a parti non originali della casa automobilistica.'],
+plate:'In caso di inosservanza delle regole, i trasgressori verranno allontanati dall\'impianto e segnalati tramite il sistema automatico di rilevamento targa.',
+hS:'Istruzioni per il lavaggio self-service',kickS:'Lavaggio manuale self-service',
+sem:['Prima di iniziare: posiziona bene il veicolo','Mettilo al centro della pista finché il semaforo diventa ROSSO.'],
+lance:'Lancia',sec:'Agisce 30 sec',up:'↑ dal basso verso l\'alto',down:'↓ dall\'alto verso il basso',roof:'↓ partendo dal tetto',start:'Premere START',then8:'Poi subito → programma 8',after6:'Subito dopo il 6',
+sp:[['Chimico cerchi · Moscerini','cerchi / moscerini','Nebulizzare il prodotto su cerchi e/o carrozzeria, lasciare agire 30 secondi, poi procedere con il lavaggio.','Non applicare su superfici calde: usarlo all\'ombra.'],
+['Mousse attiva','mousse','Bagnare il veicolo e lasciare agire 30 secondi: effetto brillante e ottimo prelavaggio per il programma 3.'],
+['Prelavaggio con shampoo','A.P.','Bagnare bene tutto il veicolo partendo dal tetto e scendendo verso il basso.'],
+['Lavaggio con spazzola e shampoo','spazzola','Passare la spazzola sul veicolo in modo uniforme, partendo dal tetto.','Usare la spazzola senza gettone rovina carrozzeria e vetri.'],
+['Risciacquo acqua fredda','A.P.','Risciacquare tutto il veicolo per togliere shampoo e sporco.'],
+['Cera con polish','A.P.','Spruzzare il veicolo. La cera mantiene la brillantezza e fa scivolare via l\'acqua.','Per un\'asciugatura perfetta: dopo la cera vai DIRETTAMENTE all\'8.'],
+['Risciacquo senza aloni','A.P.','Se non vuoi asciugare: risciacquare tutto il veicolo, l\'acqua si asciuga senza aloni.'],
+['Asciugatura','asciugatura','Soffiare partendo dal tetto, spingendo l\'acqua verso il cofano, poi verso il basso.','Da fare subito dopo la cera (programma 6), senza risciacquare.']],
+stop:['In caso di emergenza','premere STOP'],
+legS:['Prodotti solo per uso esterno. Sconsigliati su vernici opache, anodizzate e cerchi opachi o colorati.','La direzione declina ogni responsabilità: in caso di inosservanza delle istruzioni, per il mancato rispetto della distanza della lancia, se la vernice ha subito ritocchi freschi, per difetti preesistenti ed eventuali infiltrazioni.','L\'autolavaggio si riserva il diritto di modificare i tempi in caso di inosservanza del regolamento.'],
+kids:'Vietato far usare la lancia ai bambini e puntarla verso le persone (100 bar).',bye:'Arrivederci e grazie',
+hD:'È vietato sulle piste self-service',dv:['Secchi e spugne','Prodotti chimici personali','Sostare con il motore acceso','Asciugare sulla pista di lavaggio','Sostare sulla pista a lavaggio finito','Lavare il motore (Legge 319/76)'],
+att:'Attenzione',at:['In inverno è possibile la formazione di ghiaccio.','Attenzione ai tubi: possono intralciare o aggrovigliarsi.'],
+foot:'Autolavaggi Verbania · Via alle Fabbriche 27, Verbania'},
+
+en:{nav:['Car wash prices','Car wash rules','Self-service bays','Bay rules'],
+kickP:'Automatic car wash · brush wash',
+var1:'Car wash without foam rain',var2:'Car wash with foam rain',
+always:'Choose your program at the car wash pay station',
+nobr:'No brushes',nw:'New',
+progs:['Drying + Underbody','Gloss Wash','Wash with Underbody','Super Wash','Gloss + Underbody','Intensive Summer','Intensive Winter','Ultra-gloss Polish + Underbody','Gold Wash'],
+it:{sch:'Active super foam',pio:'Foam rain',risc:'Oscillating high-pressure rinse',osc:'Oscillating high pressure',osc2:'2X oscillating high pressure',sup:'High pressure from above',tot:'All-round high pressure',cer:'Wheel cleaner + high-pressure wheels',cer2:'2X wheel cleaner + high-pressure wheels',sot:'High-pressure underbody wash',neb:'Chemical misting (anti-insect)',neb2:'2X chemical misting (anti-insect)',spz:'2X brushes + shampoo',luc:'2X brushes + gloss shampoo',pol:'Polish application + 2X brushing',cera:'Super wax',asc:'2X drying',slow:'2X slow drying'},
+hP:'Instructions and warnings',safe:['Staying inside the car during the wash is strictly forbidden','as is walking through the wash area while the machine is running.'],
+steps:[['Drive in straight, headlights facing the machine','Drive in forwards (not in reverse), with all 4 wheels inside the yellow wheel guides.'],['Move forward slowly until STOP','If the white arrow lights up you have gone too far: reverse until STOP lights up.'],['Prepare the car and get out','Engine off, handbrake on, mirrors folded, aerial removed. Then get out and choose your program (P1–P9) at the pay station.'],['Green arrow: you can drive out','When the wash is finished the green arrow lights up: get back in and drive out.']],
+hNo:'Vehicles not suitable for the car wash',dimL:['Height over','Length over','Width over'],
+no:['Pick-ups and off-road vehicles with prominent protrusions (bumpers, mudguards, bull bars, beacons…)','Bike racks, ski racks, fixed roof racks, spoilers, splitters, lips, beacons, wind deflectors, side skirts and any accessory that increases the vehicle size','Parts that are not fully intact: dents, mirrors, bumpers, hubcaps, mudguards, worn or damaged wipers','Metal trims, protruding badges and poorly fitted ornaments','Classic, vintage and supercars','Sports mirrors with prominent protrusions'],
+hSc:'Not recommended',sc:['BMW models, due to fragile parts','Cars 5 years old or more','Matte or anodised paint','Matte or coloured rims','Vehicles with stickers or wraps','Hub caps and wheel nut covers'],
+reW:'Warning',re:'If damage is suspected or found, washing the vehicle again is strictly forbidden.',
+legP:['Using your own chemical products on the vehicle before or during the wash is forbidden.','As their condition cannot be checked, the car wash accepts no liability for damage to number plates, wipers and/or mirrors.','Products are for exterior use only: no liability is accepted for water leaks into the vehicle.','The management accepts no liability for failure to follow these instructions or for damage to non-original parts.'],
+plate:'Anyone who breaks the rules will be asked to leave the premises and reported through the automatic number plate recognition system.',
+hS:'Self-service wash instructions',kickS:'Manual self-service wash',
+sem:['Before you start: position the vehicle correctly','Park in the centre of the bay until the traffic light turns RED.'],
+lance:'Lance',sec:'Leave 30 sec',up:'↑ from bottom to top',down:'↓ from top to bottom',roof:'↓ starting from the roof',start:'Press START',then8:'Then straight to program 8',after6:'Right after 6',
+sp:[['Wheel cleaner · Insect remover','wheels / insects','Spray the product on wheels and/or bodywork, leave for 30 seconds, then continue washing.','Do not apply on hot surfaces: use in the shade.'],
+['Active foam','foam','Cover the vehicle and leave for 30 seconds: glossy effect and an excellent pre-wash for program 3.'],
+['Pre-wash with shampoo','high pressure','Wet the whole vehicle well, starting from the roof and working downwards.'],
+['Brush wash with shampoo','brush','Move the brush evenly over the vehicle, starting from the roof.','Using the brush without a token damages paint and windows.'],
+['Cold water rinse','high pressure','Rinse the whole vehicle to remove shampoo and dirt.'],
+['Wax with polish','high pressure','Spray the vehicle. The wax keeps the shine and makes water run off.','For perfect drying: after waxing go STRAIGHT to program 8.'],
+['Spot-free rinse','high pressure','If you don\'t want to dry: rinse the whole vehicle, it dries without spots.'],
+['Drying','dryer','Blow from the roof, pushing the water towards the bonnet, then downwards.','Do it right after waxing (program 6), without rinsing.']],
+stop:['In an emergency','press STOP'],
+legS:['Products for exterior use only. Not recommended on matte or anodised paint or matte/coloured rims.','The management accepts no liability: if instructions are not followed, if the lance distance is not respected, on freshly touched-up paint, for pre-existing defects and for water leaks.','The car wash reserves the right to change the times if the rules are not respected.'],
+kids:'Children must not use the lance. Never point it at people (100 bar).',bye:'Goodbye and thank you',
+hD:'Forbidden in the self-service bays',dv:['Buckets and sponges','Your own chemical products','Waiting with the engine running','Drying the car in the wash bay','Staying in the bay after washing','Washing the engine (Law 319/76)'],
+att:'Warning',at:['In winter ice may form.','Watch out for the hoses: they can get in the way or tangle.'],
+foot:'Autolavaggi Verbania · Via alle Fabbriche 27, Verbania (Italy)'},
+
+fr:{nav:['Tarifs portique','Consignes portique','Pistes libre-service','Interdits pistes'],
+kickP:'Portique automatique · lavage aux brosses',
+var1:'Portique sans pluie de mousse',var2:'Portique avec pluie de mousse',
+always:'Choisissez le programme à la caisse du portique',
+nobr:'Sans brosses',nw:'Nouveau',
+progs:['Séchage + Bas de caisse','Lavage Brillance','Lavage avec Bas de caisse','Lavage Super','Brillance + Bas de caisse','Intensif Été','Intensif Hiver','Polish Ultra-brillance + Bas de caisse','Lavage Gold'],
+it:{sch:'Mousse active super',pio:'Pluie de mousse',risc:'Rinçage haute pression oscillant',osc:'Haute pression oscillante',osc2:'2X haute pression oscillante',sup:'Haute pression par le haut',tot:'Haute pression intégrale',cer:'Nettoyant jantes + haute pression jantes',cer2:'2X nettoyant jantes + haute pression jantes',sot:'Lavage bas de caisse haute pression',neb:'Nébulisation chimique (anti-insectes)',neb2:'2X nébulisation chimique (anti-insectes)',spz:'2X brosses + shampooing',luc:'2X brosses + shampooing brillance',pol:'Application de polish + 2X brossage',cera:'Super cire',asc:'2X séchage',slow:'2X séchage lent'},
+hP:'Consignes et avertissements',safe:['Il est strictement interdit de rester dans le véhicule pendant le lavage','et de circuler dans la zone de lavage lorsque le portique fonctionne.'],
+steps:[['Entrez tout droit, phares vers le portique','Entrez en marche avant (pas en marche arrière), les 4 roues dans les guides jaunes.'],['Avancez lentement jusqu\'au STOP','Si la flèche blanche s\'allume, vous êtes allé trop loin : reculez jusqu\'au STOP.'],['Préparez la voiture et descendez','Moteur coupé, frein à main serré, rétroviseurs rabattus, antenne retirée. Puis descendez et choisissez le programme (P1–P9) à la caisse.'],['Flèche verte : vous pouvez sortir','À la fin du lavage la flèche verte s\'allume : remontez et sortez.']],
+hNo:'Véhicules non adaptés au portique',dimL:['Hauteur sup. à','Longueur sup. à','Largeur sup. à'],
+no:['Pick-up et tout-terrain avec saillies importantes (pare-chocs, garde-boue, pare-buffles, gyrophares…)','Porte-vélos, porte-skis, barres de toit fixes, spoilers, lames, lèvres, gyrophares, déflecteurs, jupes latérales et accessoires qui augmentent les dimensions','Éléments pas parfaitement intacts : bosses, rétroviseurs, pare-chocs, enjoliveurs, garde-boue, essuie-glaces usés ou abîmés','Profils métalliques, logos saillants et ornements mal fixés','Voitures de collection, anciennes et supercars','Rétroviseurs sport à forte saillie'],
+hSc:'Déconseillé',sc:['Modèles BMW, en raison de leur fragilité','Véhicules de 5 ans ou plus','Peintures mates ou anodisées','Jantes mates ou colorées','Véhicules avec autocollants','Cache-moyeux et cache-écrous'],
+reW:'Attention',re:'En cas de dommage présumé ou constaté, il est strictement interdit de relaver le véhicule.',
+legP:['Il est interdit d\'utiliser vos propres produits chimiques sur le véhicule avant ou pendant le lavage.','Ne pouvant en vérifier l\'état, la station décline toute responsabilité pour les dommages aux plaques, essuie-glaces et/ou rétroviseurs.','Produits à usage extérieur uniquement : aucune responsabilité en cas d\'infiltrations.','La direction décline toute responsabilité en cas de non-respect des consignes et pour les dommages aux pièces non d\'origine.'],
+plate:'En cas de non-respect des règles, les contrevenants seront expulsés de la station et signalés par le système automatique de lecture des plaques.',
+hS:'Consignes de lavage libre-service',kickS:'Lavage manuel libre-service',
+sem:['Avant de commencer : placez bien le véhicule','Placez-le au centre de la piste jusqu\'à ce que le feu passe au ROUGE.'],
+lance:'Lance',sec:'Laisser agir 30 s',up:'↑ de bas en haut',down:'↓ de haut en bas',roof:'↓ en partant du toit',start:'Appuyer sur START',then8:'Puis directement → programme 8',after6:'Juste après le 6',
+sp:[['Nettoyant jantes · Anti-insectes','jantes / insectes','Pulvérisez le produit sur les jantes et/ou la carrosserie, laissez agir 30 secondes, puis continuez le lavage.','Ne pas appliquer sur surfaces chaudes : à utiliser à l\'ombre.'],
+['Mousse active','mousse','Couvrez le véhicule et laissez agir 30 secondes : effet brillant et excellent prélavage pour le programme 3.'],
+['Prélavage au shampooing','haute pression','Mouillez bien tout le véhicule en partant du toit vers le bas.'],
+['Lavage à la brosse et shampooing','brosse','Passez la brosse uniformément sur le véhicule, en partant du toit.','Utiliser la brosse sans jeton abîme la carrosserie et les vitres.'],
+['Rinçage à l\'eau froide','haute pression','Rincez tout le véhicule pour éliminer shampooing et saleté.'],
+['Cire avec polish','haute pression','Pulvérisez le véhicule. La cire conserve la brillance et fait glisser l\'eau.','Pour un séchage parfait : après la cire passez DIRECTEMENT au 8.'],
+['Rinçage sans traces','haute pression','Si vous ne voulez pas sécher : rincez tout le véhicule, il sèche sans traces.'],
+['Séchage','séchage','Soufflez en partant du toit, en poussant l\'eau vers le capot, puis vers le bas.','À faire juste après la cire (programme 6), sans rincer.']],
+stop:['En cas d\'urgence','appuyez sur STOP'],
+legS:['Produits à usage extérieur uniquement. Déconseillés sur peintures mates, anodisées et jantes mates ou colorées.','La direction décline toute responsabilité : en cas de non-respect des consignes, de la distance de la lance, sur peinture fraîchement retouchée, pour les défauts préexistants et les infiltrations.','La station se réserve le droit de modifier les temps en cas de non-respect du règlement.'],
+kids:'Interdit de laisser les enfants utiliser la lance et de la diriger vers des personnes (100 bar).',bye:'Au revoir et merci',
+hD:'Interdit sur les pistes libre-service',dv:['Seaux et éponges','Produits chimiques personnels','Stationner moteur allumé','Sécher sur la piste de lavage','Rester sur la piste après le lavage','Laver le moteur (Loi 319/76)'],
+att:'Attention',at:['En hiver, du verglas peut se former.','Attention aux tuyaux : ils peuvent gêner ou s\'emmêler.'],
+foot:'Autolavaggi Verbania · Via alle Fabbriche 27, Verbania (Italie)'},
+
+de:{nav:['Preise Waschanlage','Hinweise Waschanlage','SB-Waschplätze','Verbote SB-Plätze'],
+kickP:'Automatische Waschanlage · Bürstenwäsche',
+var1:'Waschanlage ohne Schaumregen',var2:'Waschanlage mit Schaumregen',
+always:'Programm an der Kasse der Waschanlage wählen',
+nobr:'Ohne Bürsten',nw:'Neu',
+progs:['Trocknung + Unterboden','Glanzwäsche','Wäsche mit Unterboden','Super-Wäsche','Glanz + Unterboden','Intensiv Sommer','Intensiv Winter','Ultraglanz-Politur + Unterboden','Gold-Wäsche'],
+it:{sch:'Aktivschaum Super',pio:'Schaumregen',risc:'Oszillierende Hochdruckspülung',osc:'Oszillierender Hochdruck',osc2:'2X oszillierender Hochdruck',sup:'Hochdruck von oben',tot:'Rundum-Hochdruck',cer:'Felgenreiniger + Felgen-Hochdruck',cer2:'2X Felgenreiniger + Felgen-Hochdruck',sot:'Unterbodenwäsche mit Hochdruck',neb:'Chemische Vernebelung (gegen Insekten)',neb2:'2X chemische Vernebelung (gegen Insekten)',spz:'2X Bürsten + Shampoo',luc:'2X Bürsten + Glanzshampoo',pol:'Politurauftrag + 2X Bürsten',cera:'Superwachs',asc:'2X Trocknung',slow:'2X langsame Trocknung'},
+hP:'Anleitung und Hinweise',safe:['Während der Wäsche im Fahrzeug zu bleiben ist streng verboten','ebenso das Betreten des Waschbereichs, solange die Anlage läuft.'],
+steps:[['Gerade einfahren, Scheinwerfer zur Anlage','Vorwärts einfahren (nicht rückwärts), alle 4 Räder in den gelben Radführungen.'],['Langsam bis STOP vorfahren','Leuchtet der weiße Pfeil, sind Sie zu weit: zurücksetzen, bis STOP leuchtet.'],['Auto vorbereiten und aussteigen','Motor aus, Handbremse an, Spiegel eingeklappt, Antenne abgenommen. Dann aussteigen und das Programm (P1–P9) an der Kasse wählen.'],['Grüner Pfeil: ausfahren','Nach der Wäsche leuchtet der grüne Pfeil: einsteigen und ausfahren.']],
+hNo:'Für die Waschanlage ungeeignete Fahrzeuge',dimL:['Höhe über','Länge über','Breite über'],
+no:['Pick-ups und Geländewagen mit starken Überständen (Stoßstangen, Kotflügel, Bullbars, Rundumleuchten…)','Fahrradträger, Skiträger, feste Dachträger, Spoiler, Frontlippen, Splitter, Rundumleuchten, Windabweiser, Seitenschweller und Zubehör, das die Abmessungen vergrößert','Nicht einwandfreie Teile: Dellen, Spiegel, Stoßstangen, Radkappen, Kotflügel, abgenutzte oder beschädigte Wischer','Metallleisten, abstehende Embleme und schlecht befestigte Zierteile','Oldtimer, historische Fahrzeuge und Supersportwagen','Sportspiegel mit starkem Überstand'],
+hSc:'Nicht empfohlen',sc:['BMW-Modelle, wegen empfindlicher Teile','Fahrzeuge ab 5 Jahren','Matte oder eloxierte Lacke','Matte oder farbige Felgen','Fahrzeuge mit Aufklebern','Nabenkappen und Radmutterkappen'],
+reW:'Achtung',re:'Bei vermuteten oder festgestellten Schäden ist es streng verboten, das Fahrzeug erneut zu waschen.',
+legP:['Eigene chemische Produkte vor oder während der Wäsche zu verwenden ist verboten.','Da der Zustand nicht geprüft werden kann, übernimmt die Waschanlage keine Haftung für Schäden an Kennzeichen, Wischern und/oder Spiegeln.','Die Produkte sind nur für den Außenbereich: keine Haftung bei eindringendem Wasser.','Die Geschäftsleitung haftet nicht bei Nichtbeachtung der Hinweise und für Schäden an Nicht-Originalteilen.'],
+plate:'Bei Regelverstößen werden die Verursacher von der Anlage verwiesen und über das automatische Kennzeichenerkennungssystem gemeldet.',
+hS:'Anleitung SB-Wäsche',kickS:'Manuelle SB-Wäsche',
+sem:['Vor dem Start: Fahrzeug richtig abstellen','Mittig auf dem Platz abstellen, bis die Ampel ROT wird.'],
+lance:'Lanze',sec:'30 Sek. einwirken',up:'↑ von unten nach oben',down:'↓ von oben nach unten',roof:'↓ am Dach beginnen',start:'START drücken',then8:'Dann sofort → Programm 8',after6:'Direkt nach 6',
+sp:[['Felgenreiniger · Insektenentferner','Felgen / Insekten','Produkt auf Felgen und/oder Karosserie sprühen, 30 Sekunden einwirken lassen, dann weiterwaschen.','Nicht auf heiße Flächen auftragen: im Schatten verwenden.'],
+['Aktivschaum','Schaum','Fahrzeug einschäumen und 30 Sekunden einwirken lassen: Glanzeffekt und ideale Vorwäsche für Programm 3.'],
+['Vorwäsche mit Shampoo','Hochdruck','Das ganze Fahrzeug vom Dach nach unten gut einsprühen.'],
+['Bürstenwäsche mit Shampoo','Bürste','Die Bürste gleichmäßig über das Fahrzeug führen, am Dach beginnen.','Bürste ohne Münze verwenden beschädigt Lack und Scheiben.'],
+['Kaltwasserspülung','Hochdruck','Das ganze Fahrzeug abspülen, um Shampoo und Schmutz zu entfernen.'],
+['Wachs mit Politur','Hochdruck','Fahrzeug einsprühen. Das Wachs erhält den Glanz und lässt das Wasser abperlen.','Für perfektes Trocknen: nach dem Wachs DIREKT zu Programm 8.'],
+['Fleckenfreie Spülung','Hochdruck','Wenn Sie nicht trocknen möchten: ganzes Fahrzeug spülen, es trocknet ohne Flecken.'],
+['Trocknung','Trockner','Am Dach beginnen, das Wasser zur Motorhaube und dann nach unten blasen.','Direkt nach dem Wachs (Programm 6), ohne zu spülen.']],
+stop:['Im Notfall','STOP drücken'],
+legS:['Produkte nur für den Außenbereich. Nicht empfohlen auf matten, eloxierten Lacken und matten oder farbigen Felgen.','Keine Haftung: bei Nichtbeachtung der Anleitung, des Lanzenabstands, bei frisch ausgebessertem Lack, für Vorschäden und eindringendes Wasser.','Die Waschanlage behält sich vor, die Zeiten bei Regelverstößen zu ändern.'],
+kids:'Kinder dürfen die Lanze nicht benutzen. Nie auf Personen richten (100 bar).',bye:'Auf Wiedersehen und danke',
+hD:'Auf den SB-Plätzen verboten',dv:['Eimer und Schwämme','Eigene chemische Produkte','Mit laufendem Motor stehen','Auf dem Waschplatz trocknen','Nach der Wäsche auf dem Platz stehen bleiben','Motorwäsche (Gesetz 319/76)'],
+att:'Achtung',at:['Im Winter kann sich Eis bilden.','Vorsicht mit den Schläuchen: sie können stören oder sich verheddern.'],
+foot:'Autolavaggi Verbania · Via alle Fabbriche 27, Verbania (Italien)'},
+
+es:{nav:['Precios túnel','Instrucciones túnel','Boxes autoservicio','Prohibido en boxes'],
+kickP:'Túnel automático · lavado con cepillos',
+var1:'Túnel sin lluvia de espuma',var2:'Túnel con lluvia de espuma',
+always:'Elija el programa en la caja del túnel',
+nobr:'Sin cepillos',nw:'Novedad',
+progs:['Secado + Bajos','Lavado Abrillantador','Lavado con Bajos','Lavado Súper','Abrillantador + Bajos','Intensivo Verano','Intensivo Invierno','Pulido Ultrabrillo + Bajos','Lavado Gold'],
+it:{sch:'Espuma activa súper',pio:'Lluvia de espuma',risc:'Aclarado a alta presión oscilante',osc:'Alta presión oscilante',osc2:'2X alta presión oscilante',sup:'Alta presión superior',tot:'Alta presión total',cer:'Limpiallantas + alta presión llantas',cer2:'2X limpiallantas + alta presión llantas',sot:'Lavado de bajos a alta presión',neb:'Nebulización química (antiinsectos)',neb2:'2X nebulización química (antiinsectos)',spz:'2X cepillos + champú',luc:'2X cepillos + champú abrillantador',pol:'Aplicación de pulimento + 2X cepillado',cera:'Súper cera',asc:'2X secado',slow:'2X secado lento'},
+hP:'Instrucciones y advertencias',safe:['Está terminantemente prohibido permanecer en el coche durante el lavado','y pasar por la zona de lavado mientras el túnel está en marcha.'],
+steps:[['Entre recto, faros hacia el túnel','Entre marcha adelante (no marcha atrás), con las 4 ruedas dentro de las guías amarillas.'],['Avance despacio hasta el STOP','Si se enciende la flecha blanca se ha pasado: retroceda hasta que se encienda el STOP.'],['Prepare el coche y bájese','Motor apagado, freno de mano, retrovisores plegados, antena quitada. Luego bájese y elija el programa (P1–P9) en la caja.'],['Flecha verde: puede salir','Al terminar el lavado se enciende la flecha verde: suba y salga.']],
+hNo:'Vehículos no aptos para el túnel',dimL:['Altura más de','Longitud más de','Anchura más de'],
+no:['Pick-ups y todoterrenos con salientes marcados (parachoques, guardabarros, defensas, rotativos…)','Portabicis, portaesquís, bacas fijas, alerones, labios, splitters, rotativos, deflectores, faldones y accesorios que aumentan las dimensiones','Piezas no perfectamente intactas: abolladuras, retrovisores, parachoques, tapacubos, guardabarros, limpiaparabrisas gastados o dañados','Molduras metálicas, emblemas salientes y adornos mal fijados','Coches clásicos, de época y superdeportivos','Retrovisores deportivos con salientes marcados'],
+hSc:'No recomendado',sc:['Modelos BMW, por su fragilidad','Vehículos de 5 años o más','Pinturas mate o anodizadas','Llantas mate o de color','Vehículos con adhesivos','Tapacubos y cubretuercas'],
+reW:'Atención',re:'En caso de daños supuestos o comprobados, está terminantemente prohibido volver a lavar el vehículo.',
+legP:['Prohibido usar productos químicos propios en el vehículo antes o durante el lavado.','Al no poder comprobar su estado, el lavadero no se hace responsable de daños en matrículas, limpiaparabrisas y/o retrovisores.','Productos solo para uso exterior: no nos hacemos responsables de filtraciones.','La dirección no se hace responsable del incumplimiento de las instrucciones ni de daños en piezas no originales.'],
+plate:'Quien no respete las normas será expulsado de la instalación y señalado mediante el sistema automático de reconocimiento de matrículas.',
+hS:'Instrucciones de lavado autoservicio',kickS:'Lavado manual autoservicio',
+sem:['Antes de empezar: coloque bien el vehículo','Colóquelo en el centro del box hasta que el semáforo se ponga ROJO.'],
+lance:'Lanza',sec:'Actúa 30 s',up:'↑ de abajo hacia arriba',down:'↓ de arriba hacia abajo',roof:'↓ empezando por el techo',start:'Pulsar START',then8:'Luego directo → programa 8',after6:'Justo después del 6',
+sp:[['Limpiallantas · Antimosquitos','llantas / insectos','Pulverice el producto en llantas y/o carrocería, deje actuar 30 segundos y continúe con el lavado.','No aplicar sobre superficies calientes: úselo a la sombra.'],
+['Espuma activa','espuma','Cubra el vehículo y deje actuar 30 segundos: efecto brillante y excelente prelavado para el programa 3.'],
+['Prelavado con champú','alta presión','Moje bien todo el vehículo empezando por el techo y bajando.'],
+['Lavado con cepillo y champú','cepillo','Pase el cepillo de forma uniforme por el vehículo, empezando por el techo.','Usar el cepillo sin ficha daña la carrocería y los cristales.'],
+['Aclarado con agua fría','alta presión','Aclare todo el vehículo para quitar el champú y la suciedad.'],
+['Cera con pulimento','alta presión','Pulverice el vehículo. La cera mantiene el brillo y hace resbalar el agua.','Para un secado perfecto: después de la cera vaya DIRECTAMENTE al 8.'],
+['Aclarado sin marcas','alta presión','Si no quiere secar: aclare todo el vehículo, se seca sin marcas.'],
+['Secado','secado','Sople empezando por el techo, empujando el agua hacia el capó y luego hacia abajo.','Hágalo justo después de la cera (programa 6), sin aclarar.']],
+stop:['En caso de emergencia','pulse STOP'],
+legS:['Productos solo para uso exterior. No recomendados en pinturas mate, anodizadas y llantas mate o de color.','La dirección no se hace responsable: si no se siguen las instrucciones, si no se respeta la distancia de la lanza, en pintura recién retocada, por defectos previos y filtraciones.','El lavadero se reserva el derecho de modificar los tiempos si no se respeta el reglamento.'],
+kids:'Prohibido que los niños usen la lanza y apuntarla a las personas (100 bar).',bye:'Adiós y gracias',
+hD:'Prohibido en los boxes de autoservicio',dv:['Cubos y esponjas','Productos químicos propios','Esperar con el motor encendido','Secar en el box de lavado','Quedarse en el box tras el lavado','Lavar el motor (Ley 319/76)'],
+att:'Atención',at:['En invierno puede formarse hielo.','Cuidado con las mangueras: pueden estorbar o enredarse.'],
+foot:'Autolavaggi Verbania · Via alle Fabbriche 27, Verbania (Italia)'}
+};
+// ---------- programmi portale (chiavi, * = evidenziato) ----------
+var PRICE=[5,10,12,12,14,16,16,20,26];
+var ITEMS=[
+['risc','cera','*sot','asc'],
+['sch','osc','cer','*luc','cera','asc'],
+['sch','osc','cer','spz','*sot','cera','asc'],
+['sup','*neb','cer','spz','cera','asc'],
+['sch','osc','cer','*luc','*sot','cera','asc'],
+['*tot','*neb2','cer','spz','cera','asc'],
+['sch','*osc2','cer','spz','*sot','cera','asc'],
+['sch','*tot','*sot','cer','*neb','*luc','*pol','cera','asc'],
+['sch','*tot','*sot','*cer2','*neb2','*luc','*pol','cera','*slow']];
+var SPCOL=['#E3262B','#E0279A','#3B4CCA','#7FD3EA','#1F6FE0','#22A84A','#9B4DB0','#F5C400'];
+var SPDARK=[0,0,0,1,0,0,0,1];
+// chips per programma piste: [lancia, extra...]
+var SPCH=[['sec'],['up','20 cm'],['down','5–10 cm'],['roof'],['down','30 cm'],['50 cm','then8'],['50 cm'],['start','after6']];
+var SEC=['prezzi','portale','piste','divieti','spazzola'];
+var BR={"it": ["Spazzola", "Uso corretto della spazzola", "Per rispetto di chi usa la spazzola dopo di voi", "È vietato usare la spazzola:", ["A secco", "Inserire sempre il gettone"], ["Sui cerchi", "Per i cerchi usa il programma 1"], "Importante: prima di usarla, risciacqua la spazzola con la lancia", "5 secondi con il CHIMICO (programma 1)", "10 secondi con il PRELAVAGGIO (programma 3)", "Si declina ogni responsabilità per danni alla carrozzeria causati da un uso non corretto della spazzola.", "Grazie, la direzione"], "en": ["Brush", "Correct use of the brush", "Out of respect for those who use the brush after you", "Using the brush is forbidden:", ["Dry", "Always insert a token first"], ["On wheels", "Use program 1 for wheels"], "Important: before use, rinse the brush with the lance", "5 seconds with WHEEL CLEANER (program 1)", "10 seconds with PRE-WASH (program 3)", "No liability is accepted for paint damage caused by incorrect use of the brush.", "Thank you, the management"], "fr": ["Brosse", "Bonne utilisation de la brosse", "Par respect pour ceux qui utilisent la brosse après vous", "Il est interdit d'utiliser la brosse :", ["À sec", "Insérez toujours un jeton"], ["Sur les jantes", "Pour les jantes, utilisez le programme 1"], "Important : avant usage, rincez la brosse avec la lance", "5 secondes avec le NETTOYANT (programme 1)", "10 secondes avec le PRÉLAVAGE (programme 3)", "Aucune responsabilité pour les dommages à la carrosserie dus à une mauvaise utilisation de la brosse.", "Merci, la direction"], "de": ["Bürste", "Richtige Verwendung der Bürste", "Aus Rücksicht auf alle, die die Bürste nach Ihnen benutzen", "Die Bürste darf nicht benutzt werden:", ["Trocken", "Immer zuerst eine Münze einwerfen"], ["An den Felgen", "Für Felgen Programm 1 verwenden"], "Wichtig: Bürste vor Gebrauch mit der Lanze abspülen", "5 Sekunden mit FELGENREINIGER (Programm 1)", "10 Sekunden mit VORWÄSCHE (Programm 3)", "Keine Haftung für Lackschäden durch falsche Verwendung der Bürste.", "Danke, die Geschäftsleitung"], "es": ["Cepillo", "Uso correcto del cepillo", "Por respeto a quien usa el cepillo después de usted", "Está prohibido usar el cepillo:", ["En seco", "Inserte siempre una ficha"], ["En las llantas", "Para las llantas use el programa 1"], "Importante: antes de usarlo, aclare el cepillo con la lanza", "5 segundos con LIMPIALLANTAS (programa 1)", "10 segundos con PRELAVADO (programa 3)", "No nos hacemos responsables de daños en la carrocería por un uso incorrecto del cepillo.", "Gracias, la dirección"]};
+
+var lang='it',variant=1;
+function pick(){var h=location.hash.replace('#','');var q=new URLSearchParams(location.search);var l=q.get('lang');
+ try{l=l||localStorage.getItem('lav_lang')}catch(e){}
+ if(!l){var n=(navigator.language||'it').slice(0,2).toLowerCase();l=L.indexOf(n)>=0?n:'en'}
+ lang=L.indexOf(l)>=0?l:'en'; if(q.get('v')==='2')variant=2;}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function render(){
+ var t=T[lang];document.documentElement.lang=lang;
+ document.getElementById('langs').innerHTML=L.map(function(l){return '<button type="button" data-l="'+l+'" aria-pressed="'+(l===lang)+'">'+NAMES[l]+'</button>'}).join('');
+ var b=BR[lang];document.getElementById('nav').innerHTML=t.nav.concat([b[0]]).map(function(n,i){return '<a href="#'+SEC[i]+'">'+esc(n)+'</a>'}).join('');
+ var h='';
+ // PREZZI
+ h+='<section id="prezzi"><h1>'+esc(t.nav[0])+'</h1><div class="kick">'+esc(t.kickP)+'</div>';
+ h+='<div class="variant"><button type="button" data-v="1" aria-pressed="'+(variant===1)+'">'+esc(t.var1)+'</button><button type="button" data-v="2" aria-pressed="'+(variant===2)+'">'+esc(t.var2)+'</button></div>';
+ for(var i=0;i<9;i++){
+  var c=COL[i],fg=DARK[i]?'#0A0B0D':'#fff';
+  var bg=i===8?'linear-gradient(135deg,#9C7414,#F6D66B 45%,#FFF1B8 52%,#E2B53A 64%,#8E6A12)':c;
+  h+='<div class="prog"><div class="pb" style="background:'+bg+';color:'+(i===8?'#1A1407':fg)+'">P'+(i+1)+'</div><div class="pc"><div class="pn">'+esc(t.progs[i]);
+  if(i===0)h+='<span class="tag w">'+esc(t.nobr)+'</span>';
+  h+='<span class="price">'+PRICE[i]+' €</span></div><ul>';
+  ITEMS[i].forEach(function(k){var hl=k[0]==='*';k=k.replace('*','');var nw=false;
+   if(k==='sch'&&variant===2&&i>=6){k='pio';hl=true;nw=true}
+   h+='<li><span'+(hl?' class="hl"':'')+'>'+esc(t.it[k])+'</span>'+(nw?' <span class="tag">'+esc(t.nw)+'</span>':'')+'</li>'});
+  h+='</ul></div></div>'}
+ h+='<p class="kick" style="text-align:center;margin-top:14px">'+esc(t.always)+'</p></section>';
+ // PORTALE
+ h+='<section id="portale"><h1>'+esc(t.hP)+'</h1><div class="kick">'+esc(t.kickP)+'</div>';
+ h+='<div class="band r"><b>'+esc(t.safe[0])+'</b>'+esc(t.safe[1])+'</div>';
+ t.steps.forEach(function(s,i){h+='<div class="step"><div class="num">'+(i+1)+'</div><div><h2 style="margin:6px 0 2px">'+esc(s[0])+'</h2><p>'+esc(s[1])+'</p></div></div>'});
+ h+='<h2>'+esc(t.hNo)+'</h2><div class="dims">'+['2,20 m','5,20 m','2,30 m'].map(function(d,i){return '<div class="dim"><span>'+esc(t.dimL[i])+'</span>'+d+'</div>'}).join('')+'</div>';
+ h+='<ul class="no">'+t.no.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+ h+='<div class="band y"><b>'+esc(t.hSc)+'</b>'+t.sc.map(esc).join(' · ')+'</div>';
+ h+='<div class="band r"><b>'+esc(t.reW)+'</b>'+esc(t.re)+'</div>';
+ h+='<div class="legal"><p class="warn">'+esc(t.plate)+'</p>'+t.legP.map(function(x,i){return '<p'+(i===0?' class="warn"':'')+'>'+esc(x)+'</p>'}).join('')+'</div></section>';
+ // PISTE
+ h+='<section id="piste"><h1>'+esc(t.hS)+'</h1><div class="kick">'+esc(t.kickS)+'</div>';
+ h+='<div class="band d"><b>'+esc(t.sem[0])+'</b>'+esc(t.sem[1])+'</div>';
+ t.sp.forEach(function(p,i){var fg=SPDARK[i]?'#0A0B0D':'#fff';
+  h+='<div class="prog"><div class="pb" style="background:'+SPCOL[i]+';color:'+fg+'">'+(i+1)+'</div><div class="pc"><div class="pn">'+esc(p[0])+'</div><div class="chips"><span class="chip">'+esc(t.lance)+': '+esc(p[1])+'</span>';
+  SPCH[i].forEach(function(k){var lbl=t[k]||k;var cl=k==='then8'?' y':(k==='after6'?' g':'');h+='<span class="chip'+cl+'">'+esc(k.indexOf('cm')>0?'↔ '+k:lbl)+'</span>'});
+  h+='</div><p>'+esc(p[2])+'</p>'+(p[3]?'<p class="'+(i===0||i===3?'warn':'tip')+'">'+esc(p[3])+'</p>':'')+'</div></div>'});
+ h+='<div class="band y" style="text-align:center"><b style="color:#C1121F">'+esc(t.stop[0])+' — '+esc(t.stop[1])+'</b></div>';
+ h+='<div class="legal">'+t.legS.map(function(x){return '<p>'+esc(x)+'</p>'}).join('')+'<p class="warn">'+esc(t.plate)+'</p><p class="warn">'+esc(t.kids)+'</p></div>';
+ h+='<p style="text-align:center;font:italic 900 24px/1.2 \'Barlow Condensed\',sans-serif;text-transform:uppercase;margin-top:16px">'+esc(t.bye)+'</p></section>';
+ // DIVIETI
+ h+='<section id="divieti"><h1>'+esc(t.hD)+'</h1><ul class="no">'+t.dv.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+ h+='<div class="band r"><b>'+esc(t.att)+'</b>'+t.at.map(esc).join('<br>')+'<br>'+esc(t.plate)+'</div></section>';
+ h+='<section id="spazzola"><h1>'+esc(b[1])+'</h1><div class="band y"><b>'+esc(b[2])+'</b></div><h2>'+esc(b[3])+'</h2><ul class="no"><li><span><b>'+esc(b[4][0])+'</b> — '+esc(b[4][1])+'</span></li><li><span><b>'+esc(b[5][0])+'</b> — '+esc(b[5][1])+'</span></li></ul><div class="band d"><b>'+esc(b[6])+'</b><div class="chips"><span class="chip" style="background:#E3262B;color:#fff">'+esc(b[7])+'</span><span class="chip" style="background:#3B4CCA;color:#fff">'+esc(b[8])+'</span></div></div><div class="legal"><p>'+esc(b[9])+'</p><p><b>'+esc(b[10])+'</b></p></div></section>';
+ h+='<footer>'+esc(t.foot)+'</footer>';
+ document.getElementById('app').innerHTML=h;
+ var hs=location.hash.replace('#','');document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+hs)});
+}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-l]');if(b){lang=b.dataset.l;try{localStorage.setItem('lav_lang',lang)}catch(x){}render();return}
+ var v=e.target.closest('[data-v]');if(v){variant=+v.dataset.v;render()}});
+window.addEventListener('hashchange',render);
+pick();render();
+var hh=location.hash;if(hh){var el=document.querySelector(hh);if(el)setTimeout(function(){el.scrollIntoView()},50)}
+</script>
+</body>
+</html>
