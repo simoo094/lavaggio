@@ -65,6 +65,8 @@ p{margin:6px 0}
 .variant button{flex:1;min-height:44px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--tx);font:700 15px/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase;cursor:pointer;padding:6px}
 .variant button[aria-pressed="true"]{background:#fff;color:#0A0B0D}
 footer{margin-top:36px;color:var(--mut);font-size:13px;text-align:center}
+body.focus nav,body.focus .variant,body.focus #app>section{display:none}
+body.focus #app>section.only{display:block}
 </style>
 </head>
 <body>
@@ -319,12 +321,14 @@ function render(){
  h+='<footer>'+esc(t.foot)+'</footer>';
  document.getElementById('app').innerHTML=h;
  var hs=location.hash.replace('#','');document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+hs)});
+ if(FOCUS){document.body.classList.add('focus');var fs=document.getElementById(FOCUS);if(fs)fs.classList.add('only')}
 }
 document.addEventListener('click',function(e){var b=e.target.closest('[data-l]');if(b){lang=b.dataset.l;try{localStorage.setItem('lav_lang',lang)}catch(x){}render();return}
  var v=e.target.closest('[data-v]');if(v){variant=+v.dataset.v;render()}});
 window.addEventListener('hashchange',render);
+var FOCUS=(function(){var h=location.hash.replace('#','');return SEC.indexOf(h)>=0?h:''})();
 pick();render();
-var hh=location.hash;if(hh){var el=document.querySelector(hh);if(el)setTimeout(function(){el.scrollIntoView()},50)}
+var hh=location.hash;if(FOCUS){window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0)},60);window.addEventListener('load',function(){window.scrollTo(0,0)})}else if(hh){var el=document.querySelector(hh);if(el)setTimeout(function(){el.scrollIntoView()},50)}
 </script>
 </body>
 </html>
